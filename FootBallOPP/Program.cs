@@ -34,18 +34,40 @@ namespace FootBallOPP
             player3.Position = "RB";
             playerList.Add(player3);
 
+            Players player4 = new Players();
+            player4.PlayerName = "Alshon Jeffrey";
+            player4.TeamOf = "Eagles";
+            player4.PlayerNum = "17";
+            player4.Position = "WR";
+            playerList.Add(player4);
+
 
 
             Console.WriteLine("Enter a player, team, or position.");
             string input = Console.ReadLine();
 
-            // string GetPlayerName(Players players)
-            //{
-            //    return players.PlayerName;
-            //}
+            
             foreach (Players x in playerList)
             {
                 if (x.PlayerName == input)
+                {
+                    Players disdude = x;
+                    ReturnINfo(disdude);
+                }
+            }
+
+            foreach (Players x in playerList)
+            {
+                if (x.TeamOf == input)
+                {
+                    Players disdude = x;
+                    ReturnINfo(disdude);
+                }
+            }
+
+            foreach (Players x in playerList)
+            {
+                if (x.Position == input)
                 {
                     Players disdude = x;
                     ReturnINfo(disdude);
